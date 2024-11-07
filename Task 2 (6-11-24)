@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main{
+    public static void findTotalSum(int n,int arr[],int k){
+        int a = arr[k] - arr[k-1];
+        int b = arr[k] - arr[k+1];
+        if(a<0) {
+            a = -(a);
+        }
+        if(b < 0) {
+            b = -(b);
+        }
+        System.out.println(a+b);
+    }
+          
+    public static void main(String[] args){
+        int n=7;
+        int arr[] = {11, 22, 12, 24, 13, 26, 14};
+        int k=5;
+        findTotalSum(n, arr, k);
+    }
+}
