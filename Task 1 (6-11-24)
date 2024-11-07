@@ -1,0 +1,23 @@
+import java.util.*;
+public class Main{
+    public static void main(String[] args){
+        int n=8;
+        int arr[]={10, 20, 30, 40, 55, 66, 77, 83};
+        int res=countOddEvenDifference(n, arr);
+        System.out.println(res);
+    }
+    
+    public static int countOddEvenDifference(int n, int arr[]){
+        int oddcount=0;
+        int evencount=0;
+        for(int i=0;i<n;i++){
+            if(arr[i]%2==0){
+                evencount++;
+            }
+            else{
+                oddcount++;
+            }
+        }
+        return oddcount - evencount;
+    }
+}
