@@ -1,0 +1,27 @@
+public class Main {
+
+    public static String decryptChar(String cipherText, int shiftpos) {
+        char[] text = cipherText.toCharArray();
+
+        for (int i = 0; i < text.length; i++) {
+            char c = text[i];
+
+            if (c >= 'a' && c <= 'z') {
+                char decryptedChar = (char) (c + shiftpos);
+                if (decryptedChar > 'z') {
+                    decryptedChar -= 26;
+                }
+               text[i] = decryptedChar;
+            }
+        }
+
+        return new String(text);
+    }
+
+    public static void main(String[] args) {
+        String cipherText = "yhqgz";
+        int shiftpos = 3;
+
+        System.out.println("Decrypted text is : " + decryptChar(cipherText, shiftpos));
+    }
+}
